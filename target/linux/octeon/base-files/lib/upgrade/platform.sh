@@ -35,7 +35,8 @@ platform_copy_config() {
 		platform_copy_config_helper /dev/mmcblk1p1
 		;;
 	ubnt,edgerouter-4|\
-	ubnt,edgerouter-6p)
+	ubnt,edgerouter-6p|\
+	ubnt,edgerouter-8-xg)
 		platform_copy_config_helper /dev/mmcblk0p1
 		;;
 	esac

@@ -32,6 +32,10 @@ do_sysinfo_octeon() {
 		return 0
 		;;
 
+	"UBNT_E1000"*)
+		name="er-8-xg"
+		;;
+
 	"ITUS_SHIELD"*)
 		name="itus,shield-router"
 		;;
