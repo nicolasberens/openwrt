@@ -1,13 +1,14 @@
-/* apt-get install device-tree-compiler */
+/* apt-get install device-tree-compiler 
  * dtc --in-format fs --sort  --out-format dts /sys/firmware/devicetree/base 
  * Changed:
  *  - added 'compatible = "cavium,octeon-3860-gpio"' to gpio controller
  *
  *
- *
- *
- *
- *
+ * TODO:
+ * - no driver for:
+ *     octeon-7890-bgx (but in SDK)
+ *     atheros,ar8033
+ *     cavium,octeon-7130-ocla (On Chip Logic Analyzer?)
  */
 
 /dts-v1/;
@@ -332,7 +333,7 @@
                         mmc-slot@0 {
                                 bus-width = <0x8>;
                                 cavium,bus-max-width = <0x8>;
-                                compatible = "cavium,octeon-6130-mmc-slot";
+                                compatible = "cavium,octeon-6130-mmc-slot", "mmc-slot";
                                 reg = <0x0>;
                                 spi-max-frequency = <0x18cba80>;
                                 voltage-ranges = <0xce4 0xce4>;
@@ -341,7 +342,7 @@
                         mmc-slot@1 {
                                 bus-width = <0x8>;
                                 cavium,bus-max-width = <0x8>;
-                                compatible = "cavium,octeon-6130-mmc-slot";
+                                compatible = "cavium,octeon-6130-mmc-slot", "mmc-slot";
                                 reg = <0x1>;
                                 spi-max-frequency = <0x18cba80>;
                                 voltage-ranges = <0xce4 0xce4>;
