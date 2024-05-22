@@ -1,5 +1,5 @@
 
-ER8XG_CMDLINE:=-mtdparts=phys_mapped_flash:2048k(boot0),2048k(boot1),64k(eeprom) root=/dev/mmcblk0p2 rootdelay=10 rw rootsqimg=squashfs.img rootsqwdir=w console=ttyS0,115200 rootwait rootflags=data=journal pcie_octeon.pcie_disable=1 pcie.pcie_disable=1
+ER8XG_CMDLINE:=-mtdparts=phys_mapped_flash:2048k(boot0),2048k(boot1),64k(eeprom) root=/dev/mmcblk0p2 rootdelay=10 rw console=ttyS0,115200 rootwait rootflags=data=journal pcie_octeon.pcie_disable=1 
 define Device/ubnt_edgerouter-8-xg
   DEVICE_VENDOR := Ubiquiti
   DEVICE_PACKAGES += kmod-gpio-button-hotplug kmod-leds-gpio kmod-of-mdio kmod-sfp kmod-usb3 kmod-usb-dwc3 kmod-usb-storage-uas
