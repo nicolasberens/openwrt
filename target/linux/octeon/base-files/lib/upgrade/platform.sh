@@ -90,7 +90,8 @@ platform_do_upgrade() {
 	case "$board" in
 	er | \
 	ubnt,edgerouter-4 | \
-	ubnt,edgerouter-6p)
+	ubnt,edgerouter-6p|\
+	ubnt,edgerouter-8-xg)
 		kernel=mmcblk0p1
 		;;
 	erlite|\

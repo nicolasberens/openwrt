@@ -14,6 +14,10 @@ do_sysinfo_octeon() {
 	esac
 
 	case "$machine" in
+	"UBNT_E1000"*)
+		name="er-8-xg"
+		;;
+
 	"UBNT_E100"*)
 		name="erlite"
 		;;
@@ -30,10 +34,6 @@ do_sysinfo_octeon() {
 	"UBNT_USG"*)
 		# let generic 02_sysinfo handle it since device has its own device tree
 		return 0
-		;;
-
-	"UBNT_E1000"*)
-		name="er-8-xg"
 		;;
 
 	"ITUS_SHIELD"*)
