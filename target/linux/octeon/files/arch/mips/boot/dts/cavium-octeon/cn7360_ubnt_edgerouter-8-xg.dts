@@ -1,5 +1,5 @@
-/* apt-get install device-tree-compiler 
- * dtc --in-format fs --sort  --out-format dts /sys/firmware/devicetree/base 
+/* apt-get install device-tree-compiler
+ * dtc --in-format fs --sort  --out-format dts /sys/firmware/devicetree/base
  * Changed:
  *  - added 'compatible = "cavium,octeon-3860-gpio"' to gpio controller
  *
@@ -16,8 +16,9 @@
 / {
         #address-cells = <0x2>;
         #size-cells = <0x2>;
-        compatible = "cavium,ebb7304";
-        model = "cavium,ebb7304";
+
+        compatible = "ubnt,edgerouter-8-xg", "cavium,ebb7304", "cavium,cn7360";
+        model = "Ubiquiti EdgeRouter Infinity";
 
         memory {
                 device_type = "memory";
@@ -240,6 +241,8 @@
                                 linux,phandle = <0x13>;
                                 phandle = <0x13>;
                                 reg = <0x1>;
+                                device_type = "ethernet-phy";
+                                phy-mode = "sgmii";
                         };
                 };
 
